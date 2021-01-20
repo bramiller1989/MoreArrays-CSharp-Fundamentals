@@ -13,16 +13,16 @@ namespace MoreArrays
                 Console.WriteLine(n);
 
             // Length
-            Console.WriteLine("Length: " + numbers.Length);
+            Console.WriteLine("\nLength: " + numbers.Length);
 
             // IndexOf()
             var index = Array.IndexOf(numbers, 9);
-            Console.WriteLine("Index of 9:" + index);
+            Console.WriteLine("\nIndex of 9:" + index);
 
             // Clear()
             Array.Clear(numbers, 0,2);
 
-            Console.WriteLine("Effect of Clear()");
+            Console.WriteLine("\nEffect of Clear()");
             foreach(var n in numbers)
                 Console.WriteLine(n);
             
@@ -30,8 +30,20 @@ namespace MoreArrays
             int[] another = new int[3];
             Array.Copy(numbers, another, 3);
             
-            Console.WriteLine("Effect of Copy()");
+            Console.WriteLine("\nEffect of Copy()");
             foreach (var n in another)
+                Console.WriteLine(n);
+
+            // Sort()
+            Array.Sort(numbers);
+            Console.WriteLine("\nEffect of Sort()");
+            foreach (var n in numbers)
+                Console.WriteLine(n);
+
+            // Reverse()
+            Array.Reverse(numbers);
+            Console.WriteLine("\nEffect of Reverse()");
+            foreach (var n in numbers)
                 Console.WriteLine(n);
         }
     }
